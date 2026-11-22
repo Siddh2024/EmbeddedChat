@@ -40,6 +40,15 @@ const CheckBox = forwardRef(
       onChange?.(e);
     };
 
+    const handleKeyDown = (e) => {
+      if (disabled) return;
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        e.target.click();
+      }
+      props.onKeyDown?.(e);
+    };
+
     return (
       <label
         htmlFor={inputId}
@@ -54,6 +63,7 @@ const CheckBox = forwardRef(
           checked={isChecked}
           disabled={disabled}
           onChange={handleChange}
+          onKeyDown={handleKeyDown}
           css={styles.input}
           {...props}
         />

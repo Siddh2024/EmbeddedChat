@@ -12,16 +12,16 @@ const getListBoxStyles = (theme) => {
     `,
 
     listItem: css`
-    cursor: pointer;
-    display: flex;theme.
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.2rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.2rem;
 
-    &:hover {
-      background-color: ${theme.colors.secondary};
-    }
-  `,
+      &:hover {
+        background-color: ${theme.colors.secondary};
+      }
+    `,
 
     listText: css`
       font-weight: 600;

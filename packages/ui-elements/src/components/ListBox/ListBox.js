@@ -120,7 +120,8 @@ const ListBox = ({
                   value={option.value}
                   css={styles.checkbox}
                   checked={value?.includes(option.value)}
-                  onChange={() => {}}
+                  onChange={() => handleOptionClick(option)}
+                  onClick={(e) => e.stopPropagation()}
                 />
                 <Box
                   css={css`

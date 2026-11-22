@@ -57,11 +57,11 @@ const MultiSelect = ({
     if (isSelected) {
       const newValue = internalValue.filter((item) => item !== val);
       setInternalValue(newValue);
-      onChange(newValue);
+      onChange?.(newValue);
     } else {
       const newValue = [...internalValue, val];
       setInternalValue(newValue);
-      onChange(newValue);
+      onChange?.(newValue);
     }
   };
 
